@@ -1,0 +1,108 @@
+{
+  "name": "sayad-ganj",
+  "version": "0.1.0",
+  "description": "Balochi to Balochi Dictionary",
+  "private": true,
+  "main": "public/electron.js",
+  "homepage": "./",
+  "author": {
+    "name": "Umair Ayub",
+    "email": "umairayub79@gmail.com"
+  },
+  "dependencies": {
+    "@heroicons/react": "^1.0.6",
+    "electron-is-dev": "^2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "sqlite3": "^5.0.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "rebuild-sqlite3": "electron-rebuild -f -w sqlite3",
+    "postinstall": "electron-builder install-app-deps",
+    "electron:start": "concurrently -k \"cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:package:mac": "npm run build && electron-builder -m -c.extraMetadata.main=build/electron.js",
+    "electron:package:win": "npm run build && electron-builder -w -c.extraMetadata.main=build/electron.js --publish never",
+    "electron:package:linux": "npm run build && electron-builder -l -c.extraMetadata.main=build/electron.js",
+    "deploy": "npm run build && electron-builder -w -c.extraMetadata.main=build/electron.js --publish always"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      "last 1 electron version",
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 electron version",
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "concurrently": "^7.3.0",
+    "cross-env": "^7.0.3",
+    "electron": "^20.0.2",
+    "electron-builder": "^23.3.3",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
+    "wait-on": "^6.0.1"
+  },
+  "build": {
+    "appId": "codes.umair.sayadganj",
+    "productName": "Sayad Ganj",
+    "copyright": "Copyright © 2022 Umair Ayub",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "./icons/icon.ico",
+      "artifactName": "sayadganj-v${version}-win.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "./icons/icon.ico",
+      "uninstallerIcon": "./icons/icon.ico",
+      "license": "license",
+      "allowToChangeInstallationDirectory": true
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
+    "extraResources": [
+      {
+        "from": "./db/data.db",
+        "to": "db/data.db"
+      }
+    ],
+    "publish": {
+      "provider": "github",
+      "owner": "umairayub79",
+      "repo": "SayadGanj-Desktop"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umairayub79/SayadGanj-Desktop"
+  },
+  "bugs": {
+    "url": "https://github.com/umairayub79SayadGanj-Desktop/issues"
+  }
+}
