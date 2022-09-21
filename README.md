@@ -48,6 +48,7 @@ npm run electron:package:linux
 - [ ] Search History
 - [ ] Copy to Clipboard
 - [ ] Favorites
+- [x] Dark Mode
 
 
 ## Contributing

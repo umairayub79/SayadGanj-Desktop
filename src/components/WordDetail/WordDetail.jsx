@@ -25,23 +25,23 @@ const WordDetail = () => {
     }
 
     return (
-        <div className='flex flex-col'>
-            <div className="nav flex flex-row bg-blue-500 text-white items-center justify-center">
+        <div className='flex flex-col w-full'>
+            <div className='sticky top-0 z-50 nav flex flex-row bg-blue-500 dark:bg-gray-800 text-white items-center justify-center'>
                 <div>
-                    <ChevronRightIcon className='w-16 h-16 inline-flex self-center hover:cursor-pointer hover:text-gray-300' onClick={() => { navigate(-1) }} />
+                    <ChevronRightIcon className='w-14 h-14 inline-flex self-center hover:cursor-pointer hover:text-gray-300' onClick={() => { navigate(-1) }} />
                 </div>
                 <div>
-                    <h1>سرپادی</h1>
+                    <h2>سرپادی</h2>
                 </div>
             </div>
 
-            <div className='ُflex flex-col items-center justify-center'>
+            <div className='ُflex flex-col items-center justify-center dark:text-gray-100'>
                 {
                     loading ? (
                         <div>
                             <Skeleton />
                         </div>) : (
-                        <div className='m-16'>
+                        <div className='m-8'>
                             <div className='text-2xl leading-relaxed'>
                                 <div dangerouslySetInnerHTML={createMarkup(response)}></div>
                             </div>

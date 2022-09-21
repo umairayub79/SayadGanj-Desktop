@@ -7,9 +7,10 @@ const sqlite3 = require('sqlite3');
 
 
 let mainWindow;
+let splashWindow;
 
 
-// Initializing a new database
+// Initializing a new dنatabase
 const database = new sqlite3.Database(
     isDev
         ? path.join(__dirname, '../db/dev.db') // my root folder if in dev mode
@@ -21,16 +22,30 @@ const database = new sqlite3.Database(
             console.log('Database Loaded');
         }
     }
-    
+
 );
 
 function createWindow() {
+    splashWindow = new BrowserWindow({
+        width: 500,
+        height: 300,
+        frame: false,
+        alwaysOnTop: true,
+    });
+    splashWindow.loadFile(
+        isDev
+            ? path.join(app.getAppPath(), './public/splash.html') // Loading it from the public folder for dev
+            : path.join(app.getAppPath(), './build/splash.html')
+    );
+    
+    splashWindow.center()
     mainWindow = new BrowserWindow({
         width: 900,
         height: 800,
-        minHeight: 800,
+        minHeight: 700,
         minWidth: 900,
-        frame:false,
+        frame: false,
+        show: false,
         webPreferences: {
             // The preload file where we will perform our app communication
             preload: isDev
@@ -61,22 +76,23 @@ function createWindow() {
         mainWindow.webContents.send("winState", "unmaximized");
     })
 
-    
+
     // In development mode, if the window has loaded, then load the dev tools.
     if (isDev) {
         mainWindow.webContents.on('did-frame-finish-load', () => {
             mainWindow.webContents.openDevTools({ mode: 'detach' });
         });
     }
+    
+
+    splashWindow.webContents.once('did-finish-load', function () {
+        setTimeout(() => {
+            splashWindow.close()
+            mainWindow.show()
+    }, 2000);
+    })
 }
 
-// ((OPTIONAL)) Setting the location for the userdata folder created by an Electron app. It default to the AppData folder if you don't set it.
-app.setPath(
-    'userData',
-    isDev
-        ? path.join(app.getAppPath(), 'userdata/') // In development it creates the userdata folder where package.json is
-        : path.join(process.resourcesPath, 'userdata/') // In production it creates userdata folder in the resources folder
-);
 
 // IPC handlers
 
@@ -140,11 +156,11 @@ ipcMain.handle('close-event', () => {
 })
 
 app.on('browser-window-focus', () => {
-    mainWindow.webContents.send('winFocusState','focused')
+    mainWindow.webContents.send('winFocusState', 'focused')
 })
 
 app.on('browser-window-blur', () => {
-    mainWindow.webContents.send('winFocusState','blurred')
+    mainWindow.webContents.send('winFocusState', 'blurred')
 })
 
 // When the app is ready to load
