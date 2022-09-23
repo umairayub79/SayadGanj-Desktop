@@ -1,9 +1,10 @@
-import React,{useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Route,
   Routes,
 } from 'react-router-dom';
 import Home from './components/Home/Home';
+import History from './components/History/History';
 import Navigation from './components/Navigation/Navigation';
 import SearchResults from './components/Search/SearchResults';
 import WordDetail from './components/WordDetail/WordDetail';
@@ -37,11 +38,12 @@ const App = () => {
   return (
     <div className='ُmin-h-screen relative'>
       <div className='min-h-[calc(100vh-28px)] h-[calc(100vh-28px)] absolute top-0 bottom-0 right-0 border-l dark:border-gray-700 w-12'>
-        <Navigation isDarkMode={isDarkMode} handleDarkMode={handleDarkMode}/>
+        <Navigation isDarkMode={isDarkMode} handleDarkMode={handleDarkMode} />
       </div>
       <div className='h-[calc(100vh-28px)] absolute top-0 bottom-0 left-0 right-12  overflow-auto'>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/history" element={<History />} />
           <Route path="/search/:query" element={<SearchResults />} />
           <Route path="/word/:id" element={<WordDetail />} />
         </Routes>

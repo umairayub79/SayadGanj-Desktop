@@ -45,7 +45,7 @@ npm run electron:package:linux
 
 - [x] Random Word
 - [x] Search
-- [ ] Search History
+- [x] Search History
 - [ ] Copy to Clipboard
 - [ ] Favorites
 - [x] Dark Mode

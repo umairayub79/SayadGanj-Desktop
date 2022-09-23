@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { HiSearch } from 'react-icons/hi';
+import { addToHistory } from '../../util/localStorage';
 const Searchbar = () => {
     const [word, setWord] = useState();
     const navigate = useNavigate()
@@ -12,7 +13,9 @@ const Searchbar = () => {
     function onFormSubmit(e) {
         e.preventDefault()
         if (isNotEmpty()) {
+            addToHistory(word)
             navigate(`/search/${word}`)
+            // navigate('/history')
         }
     }
     return (
