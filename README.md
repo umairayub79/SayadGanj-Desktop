@@ -49,7 +49,7 @@ npm run electron:package:linux
 - [ ] Copy to Clipboard
 - [ ] Favorites
 - [x] Dark Mode
-
+- [ ] Virtual Keyboard
 
 ## Contributing
 

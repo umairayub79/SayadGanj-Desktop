@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { SearchIcon } from '@heroicons/react/solid';
+import { HiSearch } from 'react-icons/hi';
 const Searchbar = () => {
     const [word, setWord] = useState();
     const navigate = useNavigate()
@@ -26,7 +26,7 @@ const Searchbar = () => {
                     className="text-xl p-2 text-gray-900 flex-grow focus:outline-none w-full bg-gray-50 rounded-full  dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white" />
 
                 <button type="submit" className="bg-gray-200 dark:bg-gray-500 text-blue-500 dark:text-gray-200 p-2 rounded-full ring-gray-400 hover:ring-1 focus:outline-none active:ring-gray-400 hover:shadow-md">
-                    <SearchIcon className='w-8 h-8' />
+                    <HiSearch className='w-8 h-8' />
                 </button>
             </form>
         </div>

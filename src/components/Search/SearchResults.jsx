@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
-import { ChevronRightIcon } from '@heroicons/react/solid';
+import { HiChevronRight } from 'react-icons/hi';
 import Skeleton from '../Skeleton';
 import Word from '../Word';
 
@@ -23,7 +23,7 @@ const SearchResults = () => {
         <div className='flex flex-col'>
             <div className='sticky top-0 z-50 nav flex flex-row bg-blue-500 dark:bg-gray-800 text-white items-center justify-center'>
                 <div>
-                    <ChevronRightIcon className='w-14 h-14 inline-flex self-center hover:cursor-pointer hover:text-gray-300' onClick={() => { navigate(-1) }} />
+                    <HiChevronRight className='w-14 h-14 inline-flex self-center hover:cursor-pointer hover:text-gray-300' onClick={() => { navigate(-1) }} />
                 </div>
                 <div>
                     <h2>درگیجگ ءِ آسر</h2>
