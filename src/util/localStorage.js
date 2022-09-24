@@ -12,3 +12,7 @@ export const addToHistory = (query) => {
         localStorage.setItem(searchHistoryKey, JSON.stringify(history))
     }
 }
+
+export const deleteHistory = () => {
+    localStorage.setItem(searchHistoryKey, JSON.stringify([]))
+}
