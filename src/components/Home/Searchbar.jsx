@@ -26,7 +26,7 @@ const Searchbar = () => {
                     value={word}
                     placeholder="لبزءِدرگیجگ ءَ اداں نبشتہ بہ کن اِت"
                     type="text"
-                    className="text-xl p-2 text-gray-900 flex-grow focus:outline-none w-full bg-gray-50 rounded-full  dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white" />
+                    className="text-xl leading-[3rem] p-2 text-gray-900 flex-grow focus:outline-none w-full bg-gray-50 rounded-full  dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white" />
 
                 <button type="submit" className="bg-gray-200 dark:bg-gray-500 text-blue-500 dark:text-gray-200 p-2 rounded-full ring-gray-400 hover:ring-1 focus:outline-none active:ring-gray-400 hover:shadow-md">
                     <HiSearch className='w-8 h-8' />

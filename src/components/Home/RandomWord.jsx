@@ -18,7 +18,7 @@ export const RandomWord = () => {
 
     return (
         <div className='m-5 flex flex-col items-center justify-center'>
-            <h2 className='text-2xl dark:text-white'>Random Word</h2>
+            <h2 className='text-2xl dark:text-white'>پَدیمیں لبز</h2>
             {
                loading ? <Skeleton/> :  response ? <Word word={response}/> : '' 
             }
