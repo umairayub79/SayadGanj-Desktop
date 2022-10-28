@@ -8,6 +8,7 @@ import History from './components/History/History';
 import Navigation from './components/Navigation/Navigation';
 import SearchResults from './components/Search/SearchResults';
 import WordDetail from './components/WordDetail/WordDetail';
+import Favorites from './components/Favorites/Favorites';
 
 const App = () => {
   const prefersDarkMode = window.matchMedia(
@@ -37,13 +38,14 @@ const App = () => {
 
   return (
     <div className='ُmin-h-screen relative'>
-      <div className='min-h-[calc(100vh-28px)] h-[calc(100vh-28px)] absolute top-0 bottom-0 right-0 border-l dark:border-gray-700 w-12'>
+      <div className='min-h-[calc(100vh-28px)] h-[calc(100vh-28px)] absolute top-0 bottom-0 right-0 border-l border-gray-300 dark:border-gray-700 w-12'>
         <Navigation isDarkMode={isDarkMode} handleDarkMode={handleDarkMode} />
       </div>
       <div className='h-[calc(100vh-28px)] absolute top-0 bottom-0 left-0 right-12  overflow-auto'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/history" element={<History />} />
+          <Route path="/favorites" element={<Favorites />} />
           <Route path="/search/:query" element={<SearchResults />} />
           <Route path="/word/:id" element={<WordDetail />} />
         </Routes>

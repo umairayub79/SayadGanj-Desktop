@@ -97,9 +97,9 @@ function createWindow() {
 // IPC handlers
 
 ipcMain.handle('findAll', async (event, arg) => {
-    const sql = `SELECT * FROM sayad WHERE full_word LIKE ? `;
+    const sql = `SELECT * FROM sayadganj WHERE full_word LIKE ? OR full_word_with_symbols LIKE ? `;
     return new Promise(function (resolve, reject) {
-        database.all(sql, [`${arg}%`], function (err, result) {
+        database.all(sql, [`${arg}%`, `${arg}%`], function (err, result) {
             if (err) {
                 console.log(err)
                 reject(err)
@@ -112,7 +112,7 @@ ipcMain.handle('findAll', async (event, arg) => {
 
 
 ipcMain.handle('findOne', async (event, arg) => {
-    const sql = `SELECT * FROM sayad WHERE id = ? `;
+    const sql = `SELECT * FROM sayadganj WHERE id = ? `;
     return new Promise(function (resolve, reject) {
         database.all(sql, [arg], function (err, result) {
             if (err) {
@@ -126,7 +126,7 @@ ipcMain.handle('findOne', async (event, arg) => {
 });
 
 ipcMain.handle('randomWord', async (event, arg) => {
-    const sql = "SELECT * FROM sayad ORDER BY RANDOM() LIMIT 1";
+    const sql = "SELECT * FROM sayadganj ORDER BY RANDOM() LIMIT 1";
     return new Promise(function (resolve, reject) {
         database.all(sql, [], function (err, result) {
             if (err) {

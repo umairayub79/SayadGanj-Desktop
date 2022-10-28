@@ -5,6 +5,7 @@ import { RiCloseCircleLine } from 'react-icons/ri'
 
 export const BaseModal = ({ title, children, isOpen, handleClose }) => {
     let closeButtonRef = useRef(null)
+
     return (
         <Transition.Root
             as={Fragment}
@@ -27,7 +28,7 @@ export const BaseModal = ({ title, children, isOpen, handleClose }) => {
                         leaveTo="opacity-0 translate-y-4 sm:translate-0 sm:scale-95">
                         <div className="w-full h-[calc(100vh-70px)] inline-block align-bottom bg-white rounded-lg text-left overflow-auto shadow-xl transform translate-all sm:align-middle sm:max-w-xl sm:w-full dark:bg-gray-800">
                             <div className="absolute sticky top-0 p-2 bg-white dark:bg-gray-800">
-                                <RiCloseCircleLine ref={closeButtonRef} className="h-6 w-6 cursor-pointer dark:stroke-white" onClick={() => handleClose()} />
+                                <RiCloseCircleLine  className="h-6 w-6 cursor-pointer dark:stroke-white" onClick={() => handleClose()} />
                             </div>
                             <div className='p-2'>
                                 <div className="text-center">

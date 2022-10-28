@@ -40,6 +40,9 @@ const SearchResults = () => {
                         response.length > 0 ? (
                             <div>
                                 <div className='overflow-auto'>
+                                    <div className='text-center text-2xl p-5 text-gray-800 dark:text-gray-200'>
+                                        <p>{response.length} رکارڈ دست کپتگ </p>
+                                    </div>
                                     {response.map((word) => <Word key={word.id} word={word} />)}
                                 </div>
                             </div>

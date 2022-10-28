@@ -30,11 +30,11 @@
   }
 
   html {
-    @apply w-full h-full
+    @apply w-full h-full bg-gray-200
   }
 
   body {
-    @apply font-Amiri overflow-hidden w-full h-full
+    @apply font-Amiri overflow-hidden w-full h-full 
   }
   
 ::-webkit-scrollbar {
@@ -74,6 +74,8 @@ html.dark {
 * {
   user-select: none;
   -webkit-user-drag: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 
@@ -81,10 +83,12 @@ html.dark {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+.mask {
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
-
 
 .nav>div:first-child {
   flex: 1;

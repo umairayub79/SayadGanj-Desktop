@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
 import { HiChevronRight } from 'react-icons/hi';
-import { MdContentCopy, MdInfoOutline } from 'react-icons/md';
+import { MdContentCopy, MdFavorite, MdFavoriteBorder, MdInfoOutline } from 'react-icons/md';
 import Skeleton from '../Skeleton';
 import { InfoModal } from '../modals/InfoModal';
 import { useToast } from '../../hooks/useToast'
-
+import { addToFavorites, deleteFavorite, isInFavorites } from '../../util/localStorage'
 
 const WordDetail = () => {
     const showToast = useToast(1000)
@@ -14,6 +14,7 @@ const WordDetail = () => {
     const [loading, setLoading] = useState(true)
     const navigate = useNavigate()
     const { id } = useParams()
+    const [isFavorite, setIsFavorite] = useState(isInFavorites(id))
 
     async function findOne() {
         setLoading(true)
@@ -26,13 +27,8 @@ const WordDetail = () => {
     }, [id]);
 
 
-    function createMarkup(word) {
-        return { __html: `<div>${word.definition}</div>` }
-    }
-
     function copyToClipboard() {
-        const definition = response.definition.replace(/[<h1></h1>]/g, "")
-        navigator.clipboard.writeText(definition)
+        navigator.clipboard.writeText(response.definition)
         showToast('success', 'کاپی بوت')
     }
     return (
@@ -46,8 +42,10 @@ const WordDetail = () => {
                 </div>
 
                 <div className='ml-2'>
-                    <MdContentCopy className='w-10 h-10 ml-1 inline-flex self-center hover:cursor-pointer hover:text-gray-300' onClick={() => { copyToClipboard() }} />
-                    <MdInfoOutline className='w-10 h-10 inline-flex self-center hover:cursor-pointer hover:text-gray-300' onClick={() => { setIsOpen(true) }} />
+                    {!isFavorite ? <MdFavoriteBorder className='w-10 h-10 ml-1 inline-flex self-center hover:cursor-pointer hover:text-gray-100' onClick={() => { addToFavorites(response); setIsFavorite(true) }} /> :
+                        <MdFavorite className='w-10 h-10 ml-1 inline-flex self-center hover:cursor-pointer hover:text-gray-100' onClick={() => { deleteFavorite(id); setIsFavorite(false) }} />}
+                    <MdContentCopy className='w-10 h-10 ml-1 inline-flex self-center hover:cursor-pointer hover:text-gray-100' onClick={() => { copyToClipboard() }} />
+                    <MdInfoOutline className='w-10 h-10 inline-flex self-center hover:cursor-pointer hover:text-gray-100' onClick={() => { setIsOpen(true) }} />
                 </div>
             </div>
             <div className='ُflex flex-col items-center justify-center dark:text-gray-100'>
@@ -58,7 +56,10 @@ const WordDetail = () => {
                         </div>) : (
                         <div className='m-8'>
                             <div className='text-2xl leading-relaxed'>
-                                <div dangerouslySetInnerHTML={createMarkup(response)}></div>
+                                <div>
+                                    <h1>{response.full_word_with_symbols}</h1>
+                                    <p className='whitespace-pre-line'>{response.definition}</p>
+                                </div>
                             </div>
                         </div>)
                 }

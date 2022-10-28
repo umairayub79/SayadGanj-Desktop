@@ -4,7 +4,7 @@ export const Table = ({ columns, data }) => {
     return (
         <div>
             <table className='w-full table-auto border-collapse border'>
-            <thead class="border-b">
+            <thead className="border-b">
                     <tr>
                         {columns.map((header, key) => {
                             return (
@@ -17,9 +17,9 @@ export const Table = ({ columns, data }) => {
                     {data.map((val, key) => {
                         return (
                             <tr key={key} className="border-b">
-                                    <td class="text-sm text-gray-900 dark:text-gray-200 font-light px-4 py-2 border-r">{val.num}</td>
-                                    <td class="text-sm text-gray-900 dark:text-gray-200 font-light px-4 py-2 border-r">{val.short}</td>
-                                    <td class="text-sm text-gray-900 dark:text-gray-200 font-light px-4 py-2 border-r">{val.long}</td>
+                                    <td className="text-sm text-gray-900 dark:text-gray-200 font-light px-4 py-2 border-r">{val.num}</td>
+                                    <td className="text-sm text-gray-900 dark:text-gray-200 font-light px-4 py-2 border-r">{val.short}</td>
+                                    <td className="text-sm text-gray-900 dark:text-gray-200 font-light px-4 py-2 border-r">{val.long}</td>
                             </tr>
                         )
                     })}
