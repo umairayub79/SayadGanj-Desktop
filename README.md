@@ -1,12 +1,14 @@
 ![App Icon](./icons/256x256.png)
 
 # Sayad Ganj - سیدگنج
+The First Balochi Dictionary - بلوچی ءِ واّلی بزانت بلد
+
 A Desktop version of Sayad Ganj / سیدگنج built with ElectronJS + ReactJS + TailwindCSS
 ## Screenshots
 
-![App Screenshot](./screenshots/screenshot01.png)
-![App Screenshot 2](./screenshots/screenshot02.png)
-![App Screenshot 3](./screenshots/screenshot03.png)
+
+<img src="./screenshots/darkmode.gif" width="400" height="350" alt="App Screenshot GIF" />
+<img src="./screenshots/lightmode.gif" width="400" height="350" alt="App Screenshot GIF"/>
 
 
 # Development
@@ -51,6 +53,7 @@ npm run electron:package:linux
 - [x] Favorites
 - [x] Dark Mode
 - [ ] Virtual Keyboard
+- [ ] Ability to change the default font
 
 ## Contributing
 
