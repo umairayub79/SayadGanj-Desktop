@@ -52,7 +52,7 @@ npm run electron:package:linux
 - [x] Restructure Database
 - [x] Favorites
 - [x] Dark Mode
-- [ ] Virtual Keyboard
+- [x] Virtual Keyboard
 - [ ] Ability to change the default font
 
 ## Contributing
