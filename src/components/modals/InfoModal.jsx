@@ -112,7 +112,7 @@ export const InfoModal = ({ isOpen, handleClose }) => {
 
   
     return (
-        <BaseModal title={'رھشونی'} isOpen={isOpen} handleClose={handleClose} >
+        <BaseModal title={'رھشونی'} isOpen={isOpen} isScrollable={true} handleClose={handleClose} >
             <div className='text-center items-center content-center'>
                 <div className="text-xl text-gray-500 dark:text-gray-300">
                     <p>گْونڈگل ءُ ٹِک کہ ماں اے بزانت بلد ءَ پہ اشارہ ءَ کار مرزبوتگ اَنت</p>

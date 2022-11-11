@@ -53,7 +53,7 @@ npm run electron:package:linux
 - [x] Favorites
 - [x] Dark Mode
 - [x] Virtual Keyboard
-- [ ] Ability to change the default font
+- [x] Font Settings
 
 ## Contributing
 

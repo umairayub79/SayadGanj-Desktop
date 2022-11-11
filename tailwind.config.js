@@ -6,6 +6,8 @@ module.exports = {
   theme: {
     fontFamily: {
       Amiri: ["Amiri", "sans-serif"],
+      Estedad: ["Estedad", "sans-serif"],
+      Vazirmatn: ["Vazirmatn", "sans-serif"],
     },
     extend: {},
   },

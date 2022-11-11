@@ -1,6 +1,6 @@
 {
   "name": "sayad-ganj",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Balochi Dictionary",
   "private": true,
   "main": "public/electron.js",

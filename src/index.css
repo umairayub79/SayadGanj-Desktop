@@ -34,28 +34,28 @@
   }
 
   body {
-    @apply font-Amiri overflow-hidden w-full h-full 
+    @apply font-Amiri overflow-hidden w-full h-full
   }
-  
-::-webkit-scrollbar {
-  width: 10px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-  @apply bg-gray-300 dark:bg-gray-500;
-  /* border-radius: 5px; */
-}
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  @apply bg-gray-400 dark:bg-gray-400;
-}
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-300 dark:bg-gray-500;
+    /* border-radius: 5px; */
+  }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-500 dark:bg-gray-300;
-}
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 dark:bg-gray-400;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500 dark:bg-gray-300;
+  }
 }
 
 @tailwind components;
@@ -64,7 +64,17 @@
 
 @font-face {
   font-family: "Amiri";
-  src: url("/src/font/Amiri-Regular.ttf");
+  src: url("/src/fonts/Amiri-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Estedad";
+  src: url("/src/fonts/Estedad-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/src/fonts/Vazirmatn-Regular.ttf");
 }
 
 html.dark {

@@ -1,9 +1,10 @@
 import React, { Fragment, useRef } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { RiCloseCircleLine } from 'react-icons/ri'
+import cx from 'classnames'
 
 
-export const BaseModal = ({ title, children, isOpen, handleClose }) => {
+export const BaseModal = ({ title, isScrollable, children, isOpen, handleClose }) => {
     let closeButtonRef = useRef(null)
 
     return (
@@ -26,9 +27,11 @@ export const BaseModal = ({ title, children, isOpen, handleClose }) => {
                         leave="ease-in duration-200"
                         leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                         leaveTo="opacity-0 translate-y-4 sm:translate-0 sm:scale-95">
-                        <div className="w-full h-[calc(100vh-70px)] inline-block align-bottom bg-white rounded-lg text-left overflow-auto shadow-xl transform translate-all sm:align-middle sm:max-w-xl sm:w-full dark:bg-gray-800">
+                        <div className={cx('w-full inline-block align-bottom bg-white rounded-lg text-left overflow-auto shadow-xl transform translate-all sm:align-middle sm:max-w-xl sm:w-full dark:bg-gray-800',
+                            { 'h-[calc(100vh-70px)]': isScrollable }
+                        )}>
                             <div className="absolute sticky top-0 p-2 bg-white dark:bg-gray-800">
-                                <RiCloseCircleLine  className="h-6 w-6 cursor-pointer dark:stroke-white" onClick={() => handleClose()} />
+                                <RiCloseCircleLine className="h-6 w-6 cursor-pointer dark:stroke-white" onClick={() => handleClose()} />
                             </div>
                             <div className='p-2'>
                                 <div className="text-center">

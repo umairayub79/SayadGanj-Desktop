@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { HiChevronRight } from 'react-icons/hi';
 import { MdContentCopy, MdFavorite, MdFavoriteBorder, MdInfoOutline } from 'react-icons/md';
 import Skeleton from '../Skeleton';
-import { InfoModal } from '../modals/InfoModal';
+import { InfoModal } from '../Modals/InfoModal';
 import { useToast } from '../../hooks/useToast'
 import { addToFavorites, deleteFavorite, isInFavorites } from '../../util/localStorage'
 

@@ -1,5 +1,6 @@
 const searchHistoryKey = "searchHistory"
 const favoritesKey = "favorites"
+const currentFontKey = "currentFont"
 
 export const getHistory = () => {
     return JSON.parse(localStorage.getItem(searchHistoryKey)) || []
@@ -47,4 +48,12 @@ export const deleteFavorite = (id) => {
 
 export const deleteFavorites = () => {
     localStorage.setItem(favoritesKey, JSON.stringify([]))
+}
+
+export const setCurrentFont = (font) => {
+    localStorage.setItem(currentFontKey, font)
+}
+
+export const getCurrentFont = () => {
+    return localStorage.getItem(currentFontKey) | 0
 }
