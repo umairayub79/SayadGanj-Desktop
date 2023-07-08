@@ -4,6 +4,11 @@
 The First Balochi Dictionary - بلوچی ءِ واّلی بزانت بلد
 
 A Desktop version of Sayad Ganj / سیدگنج built with ElectronJS + ReactJS + TailwindCSS
+
+For the web version of Sayad Ganj, you can visit the [web repository](https://github.com/umairayub79/SayadGanj-Web).
+
+To access the web version, you can visit the [live website](https://labzbalad.netlify.app).
+
 ## Screenshots
 
 
