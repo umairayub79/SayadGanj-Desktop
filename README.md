@@ -15,6 +15,13 @@ To access the web version, you can visit the [live website](https://labzbalad.ne
 <img src="./screenshots/darkmode.gif" width="400" height="350" alt="App Screenshot GIF" />
 <img src="./screenshots/lightmode.gif" width="400" height="350" alt="App Screenshot GIF"/>
 
+## Download
+| File                           | Version | Size    | Release Date |
+|--------------------------------|---------|---------|--------------|
+| [Sayadganj-win32 Portable.zip](https://github.com/umairayub79/SayadGanj-Desktop/releases/download/v0.1.6/Sayadganj-v0.1.6-win32.zip)  | v0.1.6  | 131 MB  | Nov 12, 2022 |
+| [Sayadganj-win64 Portable.zip](https://github.com/umairayub79/SayadGanj-Desktop/releases/download/v0.1.6/Sayadganj-v0.1.6-win64.zip)  | v0.1.6  | 136 MB  | Nov 12, 2022 |
+| [Sayadganj-win32 Installer.exe](https://github.com/umairayub79/SayadGanj-Desktop/releases/download/v0.1.6/SayadganjSetup-v0.1.6-win32.exe) | v0.1.6  | 94.4 MB | Nov 12, 2022 |
+| [Sayadganj-win64 Installer.exe](https://github.com/umairayub79/SayadGanj-Desktop/releases/download/v0.1.6/SayadganjSetup-v0.1.6-win64.exe) | v0.1.6  | 97.8 MB | Nov 12, 2022 |
 
 # Development
 ## Run
