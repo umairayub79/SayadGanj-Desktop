@@ -1,7 +1,7 @@
 ![App Icon](./icons/256x256.png)
 
 # Sayad Ganj - سیدگنج
-The First Balochi Dictionary - بلوچی ءِ واّلی بزانت بلد
+The First Balochi Dictionary - بلوچی ءِ اوّلی بزانت بلد
 
 A Desktop version of Sayad Ganj / سیدگنج built with ElectronJS + ReactJS + TailwindCSS
 
