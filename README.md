@@ -7,7 +7,7 @@ A Desktop version of Sayad Ganj / سیدگنج built with ElectronJS + ReactJS +
 
 For the web version of Sayad Ganj, you can visit the [web repository](https://github.com/umairayub79/SayadGanj-Web).
 
-To access the web version, you can visit the [live website](https://labzbalad.netlify.app).
+To access the web version, you can visit the [live website](https://sayadganj.netlify.app).
 
 ## Screenshots
 
