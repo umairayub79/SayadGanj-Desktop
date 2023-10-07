@@ -9,7 +9,11 @@ module.exports = {
       Estedad: ["Estedad", "sans-serif"],
       Vazirmatn: ["Vazirmatn", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      backgroundColor: {
+        dark: 'rgb(15, 23, 42)',
+      },
+    }
   },
   variants: {
     extend: {},

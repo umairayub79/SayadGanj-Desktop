@@ -1,7 +1,7 @@
 import React from 'react'
 import { BaseModal } from './BaseModal'
 export const FontSettingsModal = ({ isOpen, handleClose, font, handleFontChange }) => {
-    const fonts = ["Amiri", "Estedad", "Vazirmatn"]
+    const fonts = ["System Default","Amiri", "Estedad", "Vazirmatn"]
 
     return (
         <BaseModal title={'نبشتہئے شکل'} isOpen={isOpen} handleClose={handleClose}>

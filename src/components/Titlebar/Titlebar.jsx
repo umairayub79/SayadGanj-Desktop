@@ -15,7 +15,7 @@ const Titlebar = () => {
     });
 
     return (
-        <div className={cx('top-0 relative border-b dark:border-gray-700', {
+        <div className={cx('top-0 relative border-b dark:border-gray-700 z-[99999]', {
             'bg-gray-100 dark:bg-gray-800': isActive,
             'bg-gray-200 dark:bg-gray-700': !isActive
         })}>

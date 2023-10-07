@@ -5,6 +5,9 @@ const WINDOW_API = {
    findAll: (args) => ipcRenderer.invoke('findAll', args).then((result) => {
       return result
    }), 
+   suggestion: (args) => ipcRenderer.invoke('suggestion', args).then((result) => {
+    return result
+ }), 
    findOne: (args) => ipcRenderer.invoke('findOne', args).then((result) => {
       return result
    }),

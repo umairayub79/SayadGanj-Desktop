@@ -25,16 +25,12 @@
     @apply block text-[0.67em] mt-[2.33em] mb-[2.33em] font-bold;
   }
 
-  html.dark {
-    @apply bg-gray-900;
-  }
-
   html {
-    @apply w-full h-full bg-gray-200
+    @apply w-full h-full;
   }
 
   body {
-    @apply font-Amiri overflow-hidden w-full h-full
+    @apply overflow-hidden w-full h-full;
   }
 
   ::-webkit-scrollbar {
@@ -79,6 +75,7 @@
 
 html.dark {
   color-scheme: dark;
+  background-color: rgb(15, 23, 42);
 }
 
 * {
@@ -89,7 +86,21 @@ html.dark {
 }
 
 
+input, input:before, input:after {
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+}
+
+html,
+body {
+    direction: rtl;
+}
+
 .item {
+  overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -108,4 +119,20 @@ html.dark {
   content: '';
   flex: 1;
   flex-basis: 0;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Style the loader spinner */
+.loader {
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
 }

@@ -55,5 +55,5 @@ export const setCurrentFont = (font) => {
 }
 
 export const getCurrentFont = () => {
-    return localStorage.getItem(currentFontKey) | 0
+    return localStorage.getItem(currentFontKey) | 1
 }

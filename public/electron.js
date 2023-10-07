@@ -97,7 +97,7 @@ function createWindow() {
 // IPC handlers
 
 ipcMain.handle('findAll', async (event, arg) => {
-    const sql = `SELECT * FROM sayadganj WHERE full_word LIKE ? OR full_word_with_symbols LIKE ? `;
+    const sql = `SELECT * FROM sayadganj WHERE full_word LIKE ? OR full_word_with_symbols LIKE ?`;
     return new Promise(function (resolve, reject) {
         database.all(sql, [`${arg}%`, `${arg}%`], function (err, result) {
             if (err) {
@@ -110,6 +110,19 @@ ipcMain.handle('findAll', async (event, arg) => {
     });
 });
 
+ipcMain.handle('suggestion', async (event, arg) => {
+    const sql = `SELECT * FROM sayadganj WHERE full_word LIKE ? OR full_word_with_symbols LIKE ? LIMIT 10`;
+    return new Promise(function (resolve, reject) {
+        database.all(sql, [`${arg}%`, `${arg}%`], function (err, result) {
+            if (err) {
+                console.log(err)
+                reject(err)
+            } else {
+                resolve(result)
+            }
+        });
+    });
+});
 
 ipcMain.handle('findOne', async (event, arg) => {
     const sql = `SELECT * FROM sayadganj WHERE id = ? `;

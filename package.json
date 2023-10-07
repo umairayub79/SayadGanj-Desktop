@@ -1,6 +1,6 @@
 {
   "name": "sayad-ganj",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Balochi Dictionary",
   "private": true,
   "main": "public/electron.js",
@@ -65,9 +65,15 @@
     "wait-on": "^6.0.1"
   },
   "build": {
-    "appId": "codes.umair.sayadganj",
     "productName": "Sayad Ganj",
-    "copyright": "Copyright © 2022 Umair Ayub",
+    "executableName": "Sayad Ganj",
+    "appId": "codes.umair.sayadganj",
+    "copyright": "Copyright © 2023 ${author}",
+    "artifactName": "SayadGanj-${version}-${os}-${arch}.${ext}",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
     "win": {
       "target": [
         "nsis"
@@ -82,10 +88,16 @@
       "license": "license",
       "allowToChangeInstallationDirectory": true
     },
-    "files": [
-      "build/**/*",
-      "node_modules/**/*"
-    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "public/logo.png",
+      "synopsis": "First Balochi Desktop Dictionary",
+      "description": "Explore the Balochi language with Sayad Ganj, the inaugural desktop dictionary.",
+      "category": "Education"
+    },
     "directories": {
       "buildResources": "build"
     },
