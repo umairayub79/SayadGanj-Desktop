@@ -5,17 +5,19 @@ The First Balochi Dictionary - بلوچی ءِ اوّلی بزانت بلد
 
 A Desktop version of Sayad Ganj / سیدگنج built with ElectronJS + ReactJS + TailwindCSS
 
-To access the web version, you can visit the [live website](https://sayadganj.netlify.app).
+To access the web version, you can visit the [https://sayadganj.online](https://sayadganj.online).
 
 ## Screenshots
 
 
-<img src="./screenshots/darkmode.gif" width="400" height="350" alt="App Screenshot GIF" />
-<img src="./screenshots/lightmode.gif" width="400" height="350" alt="App Screenshot GIF"/>
+<img src="./screenshots/darkmode.gif" width="400" height="350" alt="Sayadganj Screenshot GIF" />
+<img src="./screenshots/lightmode.gif" width="400" height="350" alt="Sayadganj Screenshot GIF"/>
 
 ## Download
 | File                           | Version | Size    | Release Date |
 |--------------------------------|---------|---------|--------------|
+| [Sayadganj-0.1.7-linux-x86_64.AppImage](https://github.com/umairayub79/SayadGanj-Desktop/releases/download/v0.1.7/SayadGanj-0.1.7-linux-x86_64.AppImage)  | v0.1.7  | 145 MB  | Oct 7, 2023 |
+| [Sayadganj-0.1.7-linux-amd64.deb](https://github.com/umairayub79/SayadGanj-Desktop/releases/download/v0.1.7/SayadGanj-0.1.7-linux-amd64.deb)  | v0.1.7  | 89.5 MB  | Oct 7, 2023 |
 | [Sayadganj-win32 Portable.zip](https://github.com/umairayub79/SayadGanj-Desktop/releases/download/v0.1.6/Sayadganj-v0.1.6-win32.zip)  | v0.1.6  | 131 MB  | Nov 12, 2022 |
 | [Sayadganj-win64 Portable.zip](https://github.com/umairayub79/SayadGanj-Desktop/releases/download/v0.1.6/Sayadganj-v0.1.6-win64.zip)  | v0.1.6  | 136 MB  | Nov 12, 2022 |
 | [Sayadganj-win32 Installer.exe](https://github.com/umairayub79/SayadGanj-Desktop/releases/download/v0.1.6/SayadganjSetup-v0.1.6-win32.exe) | v0.1.6  | 94.4 MB | Nov 12, 2022 |
